@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            /* padding: 10px; */
+            background-color:azure;
+            width: 200px;
+            text-align:center;
+            padding: 5px;
+        }
+        input{
+            border: 1px solid #908e8e;
+            padding: 2px;
+            border-radius: 3px
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 6px
+
+        }
+        button{
+            background-color: black;
+            color: white;
+            border: rgb(31, 31, 31);
+            border-radius: 3px;
+            padding: 5px;
+        }
+    </style>
+  <body>
+    <h2>Add to Mindly</h2>
+    <div>
+        <input id="title" placeholder="Title" />
+        <input id="tags" placeholder="tag1, tag2" />
+        <button id="saveBtn">Save Content</button>
+    </div>
+    <p id="status"></p>
+    <script src="add.js"></script>
+  </body>
+</html>
