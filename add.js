@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const token = tokenObj.authorization;
   
     document.getElementById('saveBtn').addEventListener('click', async () => {
+      saveBtn.classList.add('processing')
       const title = document.getElementById('title').value || "Untitled";
       const tags = document.getElementById('tags').value.split(',').map(t => t.trim());
   
@@ -25,10 +26,19 @@ document.addEventListener('DOMContentLoaded', async () => {
           document.getElementById("status").innerText = body;
         } else {
           document.getElementById("status").innerText = "Saved to Mindly!";
+          // document.getElementById('title').innerHTML = "";
+          // document.getElementById('tags').innerHTML = ""
         }
+        saveBtn.classList.remove('processing');
+
       } catch (err) {
         document.getElementById("status").innerText = "Something went wrong.";
       }
     });
+    
+    document.getElementById("dashboardBtn").addEventListener("click", () => {
+      chrome.tabs.create({ url: "https://www.appmindly.live/" });
+    });
   });
   
+
