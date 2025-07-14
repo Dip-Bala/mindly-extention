@@ -6,24 +6,26 @@
     <style>
       body {
         font-family: "Segoe UI", sans-serif;
-        background-color: #f7f7f7;
+        background-color: #fff;
         margin: 0;
-        padding: 0;
+        padding: 10px;
         width: 350px;
         height: auto;
-        border-radius: 12px;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
         overflow: hidden;
       }
 
       #container {
         padding: 20px;
+        border: 1px solid #d9d6d6;
+        border-radius: 10px;
+
       }
       .top-bar {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         margin-bottom: 15px;
+        gap: 8px;
       }
 
       .top-bar img {
@@ -31,9 +33,9 @@
       }
 
       .top-bar p {
-        font-size: 18px;
-        font-weight: 600;
-        color: #161b28;
+        font-size: 20px;
+        font-weight: 400;
+        color: #040f13;
         margin: 0;
       }
 
@@ -45,15 +47,17 @@
 
       input {
         padding: 10px;
-        border: 1px solid #ccc;
+        border: 1px solid #929292;
         border-radius: 8px;
         font-size: 14px;
         outline: none;
       }
-
+      ::placeholder{
+        color: #595959;
+      }
       input:focus {
-        border-color: #6366f1;
-        box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+        border-color: #2E94B9;
+        box-shadow: 0 0 0 2px rgba(99, 158, 241, 0.2);
       }
 
       button {
@@ -66,8 +70,10 @@
       }
 
       #saveBtn {
-        background-color: #111827;
+        background-color: #4c63ae;
         color: #fff;
+        font-size: 16px;
+        
       }
 
       #saveBtn:hover {
@@ -77,6 +83,8 @@
       #dashboardBtn {
         background-color: #e5e7eb;
         color: #111827;
+        font-size: 16px;
+
       }
 
       #dashboardBtn:hover {
@@ -85,8 +93,8 @@
 
       #status {
         margin-top: 12px;
-        font-size: 13px;
-        color: #16a34a;
+        font-size: 14px;
+        color: #fd57fb;
       }
       .processing {
         cursor: not-allowed;

@@ -4,77 +4,85 @@
   <meta charset="UTF-8" />
   <title>Mindly Login</title>
   <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      background-color: #f7f7f7;
-      margin: 0;
-      padding: 0;
-      width: 350px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
-      overflow: hidden;
-    }
+  body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #fff;
+        margin: 0;
+        padding: 10px;
+        width: 350px;
+        height: auto;
+        overflow: hidden;
+      }
 
-    #container {
-      padding: 20px;
-    }
+      #container {
+        padding: 20px;
+        border: 1px solid #d9d6d6;
+        border-radius: 10px;
 
-    .top-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 15px;
-    }
+      }
 
-    .top-bar img {
-      width: 32px;
-    }
+      .top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        gap: 8px;
+      }
+      .top-bar img {
+        width: 32px;
+      }
 
-    .top-bar h2 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #161b28;
-      margin: 0;
-    }
+      .top-bar p {
+        font-size: 20px;
+        font-weight: 400;
+        color: #040f13;
+        margin: 0;
+      }
 
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
 
-    input {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 14px;
-      outline: none;
-    }
+      input {
+        padding: 10px;
+        border: 1px solid #929292;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+      }
+      ::placeholder{
+        color: #595959;
+      }
+      input:focus {
+        border-color: #2E94B9;
+        box-shadow: 0 0 0 2px rgba(99, 158, 241, 0.2);
+      }
 
-    input:focus {
-      border-color: #6366f1;
-      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
-    }
+      button {
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
 
-    button {
-      padding: 10px;
-      border: none;
-      border-radius: 8px;
-      font-size: 14px;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-      background-color: #111827;
-      color: white;
-    }
+      #loginBtn {
+        background-color: #4c63ae;
+        color: #fff;
+        font-size: 16px;
+        
+      }
 
-    button:hover {
-      background-color: #1f2937;
-    }
+      #saveBtn:hover {
+        background-color: #1f2937;
+      }
 
     #status {
       margin-top: 12px;
-      font-size: 13px;
+      font-size: 14px;
       color: #dc2626;
     }
   </style>
@@ -83,7 +91,7 @@
   <div id="container">
     <div class="top-bar">
       <img src="icons/icon.png" alt="mindly-logo" />
-      <h2>Login to Mindly</h2>
+      <p>Login to Mindly</p>
     </div>
 
     <div class="form-group">
