@@ -6,25 +6,26 @@
     <style>
       body {
         font-family: "Segoe UI", sans-serif;
-        background-color: #fff;
+        background: linear-gradient(to right, #e0e7ff, #fff);
         margin: 0;
-        padding: 10px;
+        padding: 20px;
         width: 350px;
         height: auto;
-        overflow: hidden;
       }
 
       #container {
+        background: #fff;
         padding: 20px;
-        border: 1px solid #d9d6d6;
-        border-radius: 10px;
-
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e5e7eb;
       }
+
       .top-bar {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         gap: 8px;
       }
 
@@ -34,8 +35,8 @@
 
       .top-bar p {
         font-size: 20px;
-        font-weight: 400;
-        color: #040f13;
+        font-weight: 600;
+        color: #1f2937;
         margin: 0;
       }
 
@@ -47,58 +48,64 @@
 
       input {
         padding: 10px;
-        border: 1px solid #929292;
+        border: 1px solid #cbd5e1;
         border-radius: 8px;
         font-size: 14px;
         outline: none;
+        transition: 0.2s ease;
       }
-      ::placeholder{
-        color: #595959;
+
+      ::placeholder {
+        color: #64748b;
       }
+
       input:focus {
-        border-color: #2E94B9;
-        box-shadow: 0 0 0 2px rgba(99, 158, 241, 0.2);
+        border-color: #6366f1;
+        box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
       }
 
       button {
         padding: 10px;
         border: none;
         border-radius: 8px;
-        font-size: 14px;
+        font-weight: 600;
+        font-size: 15px;
         cursor: pointer;
-        transition: background-color 0.2s ease;
+        transition: all 0.2s ease;
       }
 
       #saveBtn {
-        background-color: #4c63ae;
-        color: #fff;
-        font-size: 16px;
-        
+        background: #4f46e5;
+        color: white;
       }
 
       #saveBtn:hover {
-        background-color: #1f2937;
+        background: #4338ca;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       }
 
       #dashboardBtn {
-        background-color: #e5e7eb;
+        background: #f3f4f6;
         color: #111827;
-        font-size: 16px;
-
       }
 
       #dashboardBtn:hover {
-        background-color: #d1d5db;
+        background: #e5e7eb;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
       }
 
       #status {
         margin-top: 12px;
         font-size: 14px;
-        color: #fd57fb;
+        color: #7c3aed;
+        text-align: center;
       }
+
       .processing {
         cursor: not-allowed;
-        background-color: #3d3f42;
+        background-color: #3f3f46;
       }
     </style>
   </head>
@@ -106,7 +113,7 @@
     <div id="container">
       <div class="top-bar">
         <img src="icons/icon.png" alt="Mindly Logo" />
-        <p>Add to your mind</p>
+        <p>Add to Your Mind</p>
       </div>
 
       <div class="form-group">
@@ -118,6 +125,7 @@
 
       <p id="status"></p>
     </div>
+
     <script src="add.js"></script>
   </body>
 </html>
